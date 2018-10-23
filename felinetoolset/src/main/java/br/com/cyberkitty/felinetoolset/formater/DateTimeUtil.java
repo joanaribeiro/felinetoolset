@@ -134,7 +134,7 @@ public class DateTimeUtil {
 	 * Calculates the time in milliseconds for the given date and time.
 	 * @param date {@link String} on format dd/MM/aaaa
 	 * @param time {@link String} on format hh:mi:ss:mmmm
-	 * @return
+	 * @return a {@link java.lang.Long} that represents the given datetime in milliseconds 
 	 */
 	public static Long getMillisecondsOfDatetime(String date, String time){
 		if (date == null || time == null)
@@ -156,9 +156,9 @@ public class DateTimeUtil {
 	/**
 	 * Get the String form of date-time within given milliseconds.
 	 * @param mm as {@link Long}
-	 * @return
+	 * @return a {@link java.lang.String} that represents the given datetime.
 	 */
-	public static String getDatetimeOfMilliseconds(Long mm){ // TODO corrigir formatação
+	public static String getDatetimeOfMilliseconds(Long mm){
 		if (mm == null)
 			return null;
 		String stamp = "";
@@ -178,7 +178,7 @@ public class DateTimeUtil {
 	/**
 	 * Get the String form of date within given milliseconds.
 	 * @param mm as {@link Long}
-	 * @return
+	 * @return a {@link java.lang.String} that represents the date from the given datetime.
 	 */
 	public static String getDateOfMilliseconds(Long mm){
 		if (mm == null)
@@ -196,7 +196,7 @@ public class DateTimeUtil {
 	/**
 	 * Get the String form of time within given milliseconds.
 	 * @param mm as {@link Long}
-	 * @return
+	 * @return a {@link java.lang.String} that represents the time from the given datetime.
 	 */
 	public static String getTimeOfMilliseconds(Long mm){
 		if (mm == null)
@@ -241,8 +241,8 @@ public class DateTimeUtil {
 	
 	/**
 	 * Converts the given time to milliseconds. Accepts the format hh:mi:ss:mmm only.
-	 * @param timeData as {@link Array} of {@link Long}. Accepts a maximum of 4 parameters, starting from Hour till Milliseconds
-	 * @return a {@link Long} as the total milliseconds representation of the time (in range of one day only).
+	 * @param timeData as array of {@link java.lang.Long}. Accepts a maximum of 4 parameters, starting from Hour till Milliseconds
+	 * @return a {@link java.lang.Long} as the total milliseconds representation of the time (in range of one day only).
 	 */
 	public static Long timeStringToMilliseconds(Long... timeData){
 		if (timeData == null || timeData.length <= 0 || timeData.length > 4)

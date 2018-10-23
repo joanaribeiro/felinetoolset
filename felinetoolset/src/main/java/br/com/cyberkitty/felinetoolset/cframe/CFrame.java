@@ -70,6 +70,7 @@ public abstract class CFrame extends javax.swing.JFrame implements CWindowListen
 	 * Overridden for <i>hierarchy</i> features.
 	 * <b>Should not be used directly!</b>.
 	 * <br>
+	 * @param contentPane a {@link java.awt.Component} to be registered as main container of the frame.
 	 */
 	@Override
 	public void setContentPane(java.awt.Container contentPane) {
@@ -93,7 +94,7 @@ public abstract class CFrame extends javax.swing.JFrame implements CWindowListen
 	
 	/**
 	 * Add the component to a top-down ordination.
-	 * @param comp
+	 * @param comp a {@link java.awt.Component} to be registered.
 	 */
 	public void addTopDownComponent(java.awt.Component comp){
 		this.mainPanel.registerTopDownComponent(comp);
@@ -101,7 +102,7 @@ public abstract class CFrame extends javax.swing.JFrame implements CWindowListen
 	
 	/**
 	 * Add the component to a left-right ordination.
-	 * @param comp
+	 * @param comp a {@link java.awt.Component} to be registered.
 	 */
 	public void addLeftRightComponent(java.awt.Component comp){
 		this.mainPanel.registerLeftRightComponent(comp);

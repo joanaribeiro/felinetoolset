@@ -1,12 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+	<!-- File codification -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<!-- codification - end -->
+
 	<!-- Documentations for release -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.cyberkitty</groupId>
 	<artifactId>felinetoolset</artifactId>
 	<version>1.0.0</version>
-	<name>Feline Tool Set</name>
+	<name>${project.groupId}:${project.artifactId}</name>
 	<description>A collection of codes to facilitate the creation of new projects. For felines only!</description>
 	<url>https://github.com/joanaribeiro/felinetoolset</url>
 	<licenses>
@@ -29,11 +35,50 @@
 		<url>https://github.com/joanaribeiro/felinetoolset</url>
 	</scm>
 	<!-- release - end -->
-	
+
+	<!-- Build addons -->
+	<build>
+		<plugins>
+			<!-- Generate sources -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- sources - end -->
+			
+			<!-- Generate javadoc -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- javadoc - end -->
+		</plugins>
+	</build>
+	<!-- build - end -->
+
 	<!-- Dependencies version control -->
-	<!-- Dependencies version control - end -->
-	
+	<!-- version control - end -->
+
 	<!-- Dependencies -->
-	<!-- Dependencies - end -->
+	<!-- dependencies - end -->
 
 </project>
+

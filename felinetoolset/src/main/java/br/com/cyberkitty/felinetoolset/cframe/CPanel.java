@@ -70,9 +70,9 @@ public abstract class CPanel extends javax.swing.JPanel implements Parent, Child
 	
 	/**
 	 * Register a CLabel component and his Target Component on the right order.
-	 * @param comp
-	 * @param leftRight
-	 * @param topDown
+	 * @param comp a {@link br.com.cyberkitty.felinetoolset.cframe.CLabel} to be registered.
+	 * @param leftRight a {@link boolean} to define if its left-right oriented.
+	 * @param topDown a {@link boolean} to define if its top-down oriented.
 	 */
 	public void registerLabel(CLabel comp, boolean leftRight, boolean topDown){
 		if (comp.isLabelFor()) {
