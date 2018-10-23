@@ -9,9 +9,10 @@
 
 	<!-- Documentations for release -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.cyberkitty</groupId>
+	<groupId>io.github.joanaribeiro</groupId>
 	<artifactId>felinetoolset</artifactId>
 	<version>1.0.0</version>
+	<packaging>jar</packaging>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>A collection of codes to facilitate the creation of new projects. For felines only!</description>
 	<url>https://github.com/joanaribeiro/felinetoolset</url>
@@ -54,7 +55,7 @@
 				</executions>
 			</plugin>
 			<!-- sources - end -->
-			
+
 			<!-- Generate javadoc -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -73,6 +74,19 @@
 		</plugins>
 	</build>
 	<!-- build - end -->
+	
+	<!-- Central Repository addresses -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+	<!-- repository addresses - end -->
 
 	<!-- Dependencies version control -->
 	<!-- version control - end -->
